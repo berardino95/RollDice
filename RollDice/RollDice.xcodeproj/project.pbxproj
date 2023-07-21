@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F13E4462A6A7AF900CD522B /* RollDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4452A6A7AF900CD522B /* RollDiceApp.swift */; };
+		5F13E4482A6A7AF900CD522B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4472A6A7AF900CD522B /* ContentView.swift */; };
+		5F13E44A2A6A7AFB00CD522B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F13E4492A6A7AFB00CD522B /* Assets.xcassets */; };
+		5F13E44D2A6A7AFB00CD522B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F13E44C2A6A7AFB00CD522B /* Preview Assets.xcassets */; };
+		5F13E4562A6A7B7700CD522B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4552A6A7B7700CD522B /* SettingsView.swift */; };
+		5F13E4582A6A7B8000CD522B /* RollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4572A6A7B8000CD522B /* RollView.swift */; };
+		5F13E45A2A6A7B8A00CD522B /* LatestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4592A6A7B8A00CD522B /* LatestResultView.swift */; };
+		5F13E45C2A6A7F0200CD522B /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E45B2A6A7F0200CD522B /* TabEnum.swift */; };
+		5F13E45E2A6A83A700CD522B /* DiceFacesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E45D2A6A83A700CD522B /* DiceFacesEnum.swift */; };
+		5F13E4602A6A83CF00CD522B /* DiceNumberEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E45F2A6A83CF00CD522B /* DiceNumberEnum.swift */; };
+		5F13E4622A6A886600CD522B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4612A6A886600CD522B /* DataManager.swift */; };
+		5F13E4642A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F13E4422A6A7AF900CD522B /* RollDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F13E4452A6A7AF900CD522B /* RollDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDiceApp.swift; sourceTree = "<group>"; };
+		5F13E4472A6A7AF900CD522B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F13E4492A6A7AFB00CD522B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F13E44C2A6A7AFB00CD522B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F13E4552A6A7B7700CD522B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5F13E4572A6A7B8000CD522B /* RollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollView.swift; sourceTree = "<group>"; };
+		5F13E4592A6A7B8A00CD522B /* LatestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultView.swift; sourceTree = "<group>"; };
+		5F13E45B2A6A7F0200CD522B /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
+		5F13E45D2A6A83A700CD522B /* DiceFacesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceFacesEnum.swift; sourceTree = "<group>"; };
+		5F13E45F2A6A83CF00CD522B /* DiceNumberEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceNumberEnum.swift; sourceTree = "<group>"; };
+		5F13E4612A6A886600CD522B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F13E43F2A6A7AF900CD522B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F13E4392A6A7AF900CD522B = {
+			isa = PBXGroup;
+			children = (
+				5F13E4442A6A7AF900CD522B /* RollDice */,
+				5F13E4432A6A7AF900CD522B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F13E4432A6A7AF900CD522B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F13E4422A6A7AF900CD522B /* RollDice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F13E4442A6A7AF900CD522B /* RollDice */ = {
+			isa = PBXGroup;
+			children = (
+				5F13E4452A6A7AF900CD522B /* RollDiceApp.swift */,
+				5F13E4542A6A7B6600CD522B /* View */,
+				5F13E4532A6A7B6100CD522B /* Model */,
+				5F13E4492A6A7AFB00CD522B /* Assets.xcassets */,
+				5F13E44B2A6A7AFB00CD522B /* Preview Content */,
+			);
+			path = RollDice;
+			sourceTree = "<group>";
+		};
+		5F13E44B2A6A7AFB00CD522B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5F13E44C2A6A7AFB00CD522B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F13E4532A6A7B6100CD522B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */,
+				5F13E4612A6A886600CD522B /* DataManager.swift */,
+				5F13E45D2A6A83A700CD522B /* DiceFacesEnum.swift */,
+				5F13E45F2A6A83CF00CD522B /* DiceNumberEnum.swift */,
+				5F13E45B2A6A7F0200CD522B /* TabEnum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F13E4542A6A7B6600CD522B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F13E4472A6A7AF900CD522B /* ContentView.swift */,
+				5F13E4572A6A7B8000CD522B /* RollView.swift */,
+				5F13E4592A6A7B8A00CD522B /* LatestResultView.swift */,
+				5F13E4552A6A7B7700CD522B /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F13E4412A6A7AF900CD522B /* RollDice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F13E4502A6A7AFB00CD522B /* Build configuration list for PBXNativeTarget "RollDice" */;
+			buildPhases = (
+				5F13E43E2A6A7AF900CD522B /* Sources */,
+				5F13E43F2A6A7AF900CD522B /* Frameworks */,
+				5F13E4402A6A7AF900CD522B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RollDice;
+			productName = RollDice;
+			productReference = 5F13E4422A6A7AF900CD522B /* RollDice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F13E43A2A6A7AF900CD522B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5F13E4412A6A7AF900CD522B = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 5F13E43D2A6A7AF900CD522B /* Build configuration list for PBXProject "RollDice" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F13E4392A6A7AF900CD522B;
+			productRefGroup = 5F13E4432A6A7AF900CD522B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F13E4412A6A7AF900CD522B /* RollDice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F13E4402A6A7AF900CD522B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F13E44D2A6A7AFB00CD522B /* Preview Assets.xcassets in Resources */,
+				5F13E44A2A6A7AFB00CD522B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F13E43E2A6A7AF900CD522B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F13E4562A6A7B7700CD522B /* SettingsView.swift in Sources */,
+				5F13E45E2A6A83A700CD522B /* DiceFacesEnum.swift in Sources */,
+				5F13E4602A6A83CF00CD522B /* DiceNumberEnum.swift in Sources */,
+				5F13E45C2A6A7F0200CD522B /* TabEnum.swift in Sources */,
+				5F13E4582A6A7B8000CD522B /* RollView.swift in Sources */,
+				5F13E4482A6A7AF900CD522B /* ContentView.swift in Sources */,
+				5F13E4642A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift in Sources */,
+				5F13E4462A6A7AF900CD522B /* RollDiceApp.swift in Sources */,
+				5F13E4622A6A886600CD522B /* DataManager.swift in Sources */,
+				5F13E45A2A6A7B8A00CD522B /* LatestResultView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5F13E44E2A6A7AFB00CD522B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F13E44F2A6A7AFB00CD522B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F13E4512A6A7AFB00CD522B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RollDice/Preview Content\"";
+				DEVELOPMENT_TEAM = J9BWXBY6SC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bera.RollDice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F13E4522A6A7AFB00CD522B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RollDice/Preview Content\"";
+				DEVELOPMENT_TEAM = J9BWXBY6SC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bera.RollDice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F13E43D2A6A7AF900CD522B /* Build configuration list for PBXProject "RollDice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F13E44E2A6A7AFB00CD522B /* Debug */,
+				5F13E44F2A6A7AFB00CD522B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F13E4502A6A7AFB00CD522B /* Build configuration list for PBXNativeTarget "RollDice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F13E4512A6A7AFB00CD522B /* Debug */,
+				5F13E4522A6A7AFB00CD522B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F13E43A2A6A7AF900CD522B /* Project object */;
+}
