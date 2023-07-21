@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @AppStorage("selectedTab") var selectedTab = Tab.resultView
+    @AppStorage("selectedTab") var selectedTab = Tab.rollView
     
     var body: some View {
         TabView(selection: $selectedTab){
