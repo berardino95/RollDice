@@ -21,6 +21,8 @@
 		5F13E4642A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */; };
 		5F13E4662A6AA66B00CD522B /* SettingView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4652A6AA66B00CD522B /* SettingView-ViewModel.swift */; };
 		5F13E4682A6AA78E00CD522B /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4672A6AA78E00CD522B /* Dice.swift */; };
+		5F13E46A2A6AAAFE00CD522B /* LatestResultView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */; };
+		5F13E46C2A6BCB3100CD522B /* RollView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E46B2A6BCB3100CD522B /* RollView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		5F13E4652A6AA66B00CD522B /* SettingView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingView-ViewModel.swift"; sourceTree = "<group>"; };
 		5F13E4672A6AA78E00CD522B /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LatestResultView-ViewModel.swift"; sourceTree = "<group>"; };
+		5F13E46B2A6BCB3100CD522B /* RollView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RollView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,9 @@
 			children = (
 				5F13E4472A6A7AF900CD522B /* ContentView.swift */,
 				5F13E4572A6A7B8000CD522B /* RollView.swift */,
+				5F13E46B2A6BCB3100CD522B /* RollView-ViewModel.swift */,
 				5F13E4592A6A7B8A00CD522B /* LatestResultView.swift */,
+				5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */,
 				5F13E4552A6A7B7700CD522B /* SettingsView.swift */,
 				5F13E4652A6AA66B00CD522B /* SettingView-ViewModel.swift */,
 			);
@@ -183,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F13E46C2A6BCB3100CD522B /* RollView-ViewModel.swift in Sources */,
 				5F13E4562A6A7B7700CD522B /* SettingsView.swift in Sources */,
 				5F13E45E2A6A83A700CD522B /* DiceFacesEnum.swift in Sources */,
 				5F13E4602A6A83CF00CD522B /* DiceNumberEnum.swift in Sources */,
@@ -194,6 +201,7 @@
 				5F13E4462A6A7AF900CD522B /* RollDiceApp.swift in Sources */,
 				5F13E4622A6A886600CD522B /* DataManager.swift in Sources */,
 				5F13E4682A6AA78E00CD522B /* Dice.swift in Sources */,
+				5F13E46A2A6AAAFE00CD522B /* LatestResultView-ViewModel.swift in Sources */,
 				5F13E45A2A6A7B8A00CD522B /* LatestResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

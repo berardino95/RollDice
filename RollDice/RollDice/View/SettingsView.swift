@@ -12,26 +12,29 @@ struct SettingsView: View {
     @StateObject var vm = ViewModel()
     
     var body: some View {
-        Form{
-            Section("How many dices you want?"){
-                Picker("Number of dice", selection: $vm.data.numberOfDice) {
-                    ForEach(DiceNumber.allCases) { number in
-                        Text("\(number.rawValue)")
+        NavigationView {
+            Form{
+                Section("How many dice you want?"){
+                    Picker("Number of dice", selection: $vm.data.numberOfDice) {
+                        ForEach(DiceNumber.allCases) { number in
+                            Text("\(number.rawValue)")
+                        }
+                        //                    .onChange(of: vm.appData.numberOfDice, perform: { _ in DataManager.save(vm.appData) })
                     }
-//                    .onChange(of: vm.appData.numberOfDice, perform: { _ in DataManager.save(vm.appData) })
+                }
+                
+                Section("How many faces?") {
+                    Picker("Number of faces", selection: $vm.data.diceFaces) {
+                        ForEach(DiceFaces.allCases) { number in
+                            Text("\(number.rawValue)")
+                        }
+                        //                    .onChange(of: vm.appData.diceFaces, perform: { _ in DataManager.save(vm.appData) })
+                    }
                 }
             }
             
-            Section("How many faces?") {
-                Picker("Number of faces", selection: $vm.data.diceFaces) {
-                    ForEach(DiceFaces.allCases) { number in
-                        Text("\(number.rawValue)")
-                    }
-//                    .onChange(of: vm.appData.diceFaces, perform: { _ in DataManager.save(vm.appData) })
-                }
-            }
+            .navigationTitle("Settings")
         }
-        
     }
 }
 
