@@ -26,6 +26,8 @@ struct LatestResultView: View {
                                     Text("\(result.total)")
                                         .font(.title2.bold())
                                 }
+                                .accessibilityElement()
+                                .accessibilityLabel("Result for each dice \(result.resultForEachDice), with a total of \(result.total)")
                             }
                             .onDelete(perform: deleteRow)
                         } header: {
@@ -34,6 +36,7 @@ struct LatestResultView: View {
                                 Spacer()
                                 Text("Total")
                             }
+                            .accessibilityElement()
                         }
                     }
                     

@@ -11,6 +11,7 @@ struct RollView: View {
     
     @StateObject var vm = ViewModel()
     @Environment(\.colorScheme) var colorSceme
+    @Environment(\.accessibilityVoiceOverEnabled) var voiceOver
     
     var body: some View {
         ZStack{
@@ -20,6 +21,7 @@ struct RollView: View {
                     Text("You are rolling")
                     Text("\(vm.data.numberOfDice.rawValue) dice with \(vm.data.diceFaces.rawValue) faces")
                 }
+                .accessibilityElement(children: .combine)
                 .font(.title)
                 .foregroundColor(.secondary)
                 
@@ -38,11 +40,12 @@ struct RollView: View {
                         .padding()
                     }
                 }
+                .accessibilityElement(children: .ignore)
                 
                 Spacer()
                 
                 Button{
-                    vm.start()
+                    vm.start(voiceOver: voiceOver)
                 } label: {
                     Text("Roll")
                         .font(.title2.bold())
@@ -54,6 +57,13 @@ struct RollView: View {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)  )
                 }
                 Spacer()
+                
+                if vm.sum != 0 && voiceOver == true {
+                    Text("Your total score is: \(vm.sum)")
+                }
+                
+                Spacer()
+                
             }
             .onAppear{ vm.data = DataManager.loadData()
                 vm.timer.upstream.connect().cancel()
@@ -63,24 +73,30 @@ struct RollView: View {
             }
             .onReceive(vm.timer) { time in
                 if vm.time < 10 {
-                    vm.time += 1
+                    
+                    if voiceOver == true {
+                        vm.time = 10
+                    } else {
+                        vm.time += 1
+                    }
+                    
                     vm.roll()
                 } else {
-                    vm.stop()
+                    vm.stop(voiceOver: voiceOver)
                 }
             }
-            .allowsHitTesting(vm.isShowed == false ? true : false)
-            .blur(radius: vm.isShowed == true ? 1.5 : 0)
+            .allowsHitTesting(vm.isShowed == false && voiceOver == false ? true : false)
+            .blur(radius: vm.isShowed == true && voiceOver == false ? 1.5 : 0)
             
             
             
-            if vm.isShowed {
+            if vm.isShowed && voiceOver == false {
                 ZStack{
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .foregroundColor(colorSceme == .dark ? Color(uiColor: .systemGray4) : .white)
                         .shadow(radius: 20)
                     VStack(spacing: 10){
-                        Text("You total score is:")
+                        Text("Your total score is:")
                             .font(.title)
                             .foregroundColor(colorSceme == .dark ? .white : .black)
                         Text("\(vm.sum)")
@@ -88,6 +104,7 @@ struct RollView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(colorSceme == .dark ? .white: .black)
                     }
+                    .accessibilityElement(children: .combine)
                     VStack{
                         HStack{
                             Spacer()

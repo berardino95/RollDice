@@ -39,13 +39,15 @@ extension RollView {
             self.data = DataManager.loadData()
         }
         
-        func start(){
+        func start(voiceOver: Bool){
             timer = Timer.publish(every: 0.2,tolerance: 0.5, on: .main,in: .common).autoconnect()
             time = 0
-            feedback.notificationOccurred(.success)
             
-            if data.hapticFeedbackIsEnable {
+            if data.hapticFeedbackIsEnable && voiceOver == false {
+                
+                feedback.notificationOccurred(.success)
                 complexSuccess()
+                
             }
             
             print("start")
@@ -66,14 +68,18 @@ extension RollView {
             print("sum")
         }
         
-        func stop(){
+        func stop(voiceOver: Bool){
             timer.upstream.connect().cancel()
             calculateTotal()
             calculateResultForEachDice()
             withAnimation {
                 isShowed = true
             }
-            feedback.notificationOccurred(.success)
+            
+            if voiceOver == false{
+                feedback.notificationOccurred(.success)
+            }
+            
             data.results.append(Result(total: sum, resultForEachDice: resultForEachDice))
             DataManager.save(data)
             print("stop")
@@ -101,7 +107,7 @@ extension RollView {
         
         
         func complexSuccess() {
-            guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else {return }
+            guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
             var events = [CHHapticEvent]()
             
             for i in stride(from: 0, to: 1, by: 0.15){
