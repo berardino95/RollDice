@@ -23,6 +23,8 @@
 		5F13E4682A6AA78E00CD522B /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4672A6AA78E00CD522B /* Dice.swift */; };
 		5F13E46A2A6AAAFE00CD522B /* LatestResultView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */; };
 		5F13E46C2A6BCB3100CD522B /* RollView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E46B2A6BCB3100CD522B /* RollView-ViewModel.swift */; };
+		5F13E46E2A6DCDF700CD522B /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E46D2A6DCDF700CD522B /* GridStack.swift */; };
+		5F13E4702A6DD49D00CD522B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13E46F2A6DD49D00CD522B /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		5F13E4672A6AA78E00CD522B /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LatestResultView-ViewModel.swift"; sourceTree = "<group>"; };
 		5F13E46B2A6BCB3100CD522B /* RollView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RollView-ViewModel.swift"; sourceTree = "<group>"; };
+		5F13E46D2A6DCDF700CD522B /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		5F13E46F2A6DD49D00CD522B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = RollDice/Model/Result.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				5F13E4632A6A8CF700CD522B /* FileManager-DocumentsDirectory.swift */,
 				5F13E4612A6A886600CD522B /* DataManager.swift */,
 				5F13E4672A6AA78E00CD522B /* Dice.swift */,
+				5F13E46F2A6DD49D00CD522B /* Result.swift */,
 				5F13E45D2A6A83A700CD522B /* DiceFacesEnum.swift */,
 				5F13E45F2A6A83CF00CD522B /* DiceNumberEnum.swift */,
 				5F13E45B2A6A7F0200CD522B /* TabEnum.swift */,
@@ -115,6 +120,7 @@
 				5F13E4692A6AAAFE00CD522B /* LatestResultView-ViewModel.swift */,
 				5F13E4552A6A7B7700CD522B /* SettingsView.swift */,
 				5F13E4652A6AA66B00CD522B /* SettingView-ViewModel.swift */,
+				5F13E46D2A6DCDF700CD522B /* GridStack.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 				5F13E45E2A6A83A700CD522B /* DiceFacesEnum.swift in Sources */,
 				5F13E4602A6A83CF00CD522B /* DiceNumberEnum.swift in Sources */,
 				5F13E45C2A6A7F0200CD522B /* TabEnum.swift in Sources */,
+				5F13E46E2A6DCDF700CD522B /* GridStack.swift in Sources */,
+				5F13E4702A6DD49D00CD522B /* Result.swift in Sources */,
 				5F13E4582A6A7B8000CD522B /* RollView.swift in Sources */,
 				5F13E4662A6AA66B00CD522B /* SettingView-ViewModel.swift in Sources */,
 				5F13E4482A6A7AF900CD522B /* ContentView.swift in Sources */,

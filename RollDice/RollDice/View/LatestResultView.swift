@@ -18,27 +18,41 @@ struct LatestResultView: View {
                     Text("You didn't roll the dice yet")
                 } else {
                     List{
-                        ForEach(vm.data.results, id: \.self) { result in
-                            Text("\(result)")
+                        Section{
+                            ForEach(vm.data.results.reversed()) { result in
+                                HStack{
+                                    Text("\(result.resultForEachDice)")
+                                    Spacer()
+                                    Text("\(result.total)")
+                                        .font(.title2.bold())
+                                }
+                            }
+                            .onDelete(perform: deleteRow)
+                        } header: {
+                            HStack{
+                                Text("Result for each dice")
+                                Spacer()
+                                Text("Total")
+                            }
                         }
-                        .onDelete(perform: deleteRow)
+                    }
+                    
+                    .toolbar{
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            EditButton()
+                        }
+                    }
+                    .toolbar{
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Delete all"){
+                                vm.confirmIsShowed  = true
+                            }
+                            .disabled(vm.data.results.isEmpty)
+                        }
                     }
                 }
             }
             .navigationTitle("Latest results")
-            .toolbar{
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-            }
-            .toolbar{
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Delete all"){
-                        vm.confirmIsShowed  = true
-                    }
-                    .disabled(vm.data.results.isEmpty)
-                }
-            }
             .alert("Deleting all results", isPresented: $vm.confirmIsShowed) {
                 Button("Yes", role: .destructive) { vm.deleteAllResults() }
                 Button("No", role: .cancel) { }

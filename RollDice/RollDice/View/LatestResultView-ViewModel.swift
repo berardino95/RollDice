@@ -14,7 +14,7 @@ extension LatestResultView{
         @Published var confirmIsShowed = false
         
         func deleteAllResults(){
-            data.results = []
+            data.results = [Result]()
             DataManager.save(data)
         }
         

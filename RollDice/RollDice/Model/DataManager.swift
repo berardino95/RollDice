@@ -25,6 +25,7 @@ class DataManager : ObservableObject{
         do{
             let data = try JSONEncoder().encode(data)
             try data.write(to: DataManager.savePath, options: [.atomic, .completeFileProtection])
+            print("saved")
         } catch {
             print("Error: \(error.localizedDescription)")
         }

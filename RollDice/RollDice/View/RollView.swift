@@ -10,6 +10,7 @@ import SwiftUI
 struct RollView: View {
     
     @StateObject var vm = ViewModel()
+    @Environment(\.colorScheme) var colorSceme
     
     var body: some View {
         ZStack{
@@ -48,7 +49,7 @@ struct RollView: View {
                         .foregroundColor(.white)
                         .padding()
                         .padding(.horizontal, 50)
-                        .background(.secondary)
+                        .background(.primary)
                         .clipShape(
                             RoundedRectangle(cornerRadius: 10, style: .continuous)  )
                 }
@@ -58,12 +59,12 @@ struct RollView: View {
                 vm.timer.upstream.connect().cancel()
                 vm.roll()
                 vm.feedback.prepare()
+                vm.prepareHaptics()
             }
             .onReceive(vm.timer) { time in
                 if vm.time < 10 {
                     vm.time += 1
                     vm.roll()
-                    print("\(vm.time)")
                 } else {
                     vm.stop()
                 }
@@ -76,16 +77,16 @@ struct RollView: View {
             if vm.isShowed {
                 ZStack{
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .foregroundColor(.white)
+                        .foregroundColor(colorSceme == .dark ? Color(uiColor: .systemGray4) : .white)
                         .shadow(radius: 20)
                     VStack(spacing: 10){
                         Text("You total score is:")
                             .font(.title)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorSceme == .dark ? .white : .black)
                         Text("\(vm.sum)")
                             .font(.system(size: 60))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorSceme == .dark ? .white: .black)
                     }
                     VStack{
                         HStack{
@@ -96,7 +97,7 @@ struct RollView: View {
                                 Image(systemName: "x.circle.fill")
                                     .font(.title)
                                     .padding()
-                                    .foregroundColor(.red)
+                                    .symbolRenderingMode(.multicolor)
                             }
                         }
                         Spacer()

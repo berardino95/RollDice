@@ -19,7 +19,9 @@ struct SettingsView: View {
                         ForEach(DiceNumber.allCases) { number in
                             Text("\(number.rawValue)")
                         }
-                        //                    .onChange(of: vm.appData.numberOfDice, perform: { _ in DataManager.save(vm.appData) })
+                    }
+                    .onChange(of: vm.data.numberOfDice) { _ in
+                        DataManager.save(vm.data)
                     }
                 }
                 
@@ -28,12 +30,24 @@ struct SettingsView: View {
                         ForEach(DiceFaces.allCases) { number in
                             Text("\(number.rawValue)")
                         }
-                        //                    .onChange(of: vm.appData.diceFaces, perform: { _ in DataManager.save(vm.appData) })
                     }
                 }
+                .onChange(of: vm.data.diceFaces) { _ in
+                    DataManager.save(vm.data)
+                }
+                
+                Section{
+                    Toggle("Haptic feedback", isOn: $vm.data.hapticFeedbackIsEnable)
+                }
+                .onChange(of: vm.data.hapticFeedbackIsEnable) { _ in
+                    DataManager.save(vm.data)
+                }
+                
             }
-            
             .navigationTitle("Settings")
+        }
+        .onAppear{
+            vm.data = DataManager.loadData()
         }
     }
 }
