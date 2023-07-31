@@ -20,9 +20,6 @@ struct SettingsView: View {
                             Text("\(number.rawValue)")
                         }
                     }
-                    .onChange(of: vm.data.numberOfDice) { _ in
-                        DataManager.save(vm.data)
-                    }
                 }
                 
                 Section("How many faces?") {
@@ -31,9 +28,6 @@ struct SettingsView: View {
                             Text("\(number.rawValue)")
                         }
                     }
-                }
-                .onChange(of: vm.data.diceFaces) { _ in
-                    DataManager.save(vm.data)
                 }
                 
                 Section{

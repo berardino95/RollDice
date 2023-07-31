@@ -12,7 +12,11 @@ extension SettingsView {
     
     @MainActor class ViewModel : ObservableObject{
         
-        @Published var data = DataManager.loadData() 
+        @Published var data = DataManager.loadData() {
+            didSet {
+                DataManager.save(data)
+            }
+        }
         
     }
     
