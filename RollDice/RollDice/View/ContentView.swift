@@ -20,9 +20,9 @@ struct ContentView: View {
                 .tag(Tab.rollView)
             LatestResultView()
                 .tabItem {
-                    Label("Result", systemImage: "list.bullet.clipboard")
+                    Label("Results", systemImage: "list.bullet.clipboard")
                 }
-                .tag(Tab.resultView)
+                .tag(Tab.resultsView)
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "slider.horizontal.3")

@@ -80,7 +80,7 @@ extension RollView {
                 feedback.notificationOccurred(.success)
             }
             
-            data.results.append(Result(total: sum, resultForEachDice: resultForEachDice))
+            data.results.insert((Result(total: sum, resultForEachDice: resultForEachDice)), at: 0)
             DataManager.save(data)
             print("stop")
         }

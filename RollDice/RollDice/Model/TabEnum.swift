@@ -6,5 +6,5 @@
 //
 
     enum Tab: String, CaseIterable {
-        case rollView, resultView, settingsView
+        case rollView, resultsView, settingsView
     }

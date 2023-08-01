@@ -19,7 +19,7 @@ struct LatestResultView: View {
                 } else {
                     List{
                         Section{
-                            ForEach(vm.data.results.reversed()) { result in
+                            ForEach(vm.data.results) { result in
                                 HStack{
                                     Text("\(result.resultForEachDice)")
                                     Spacer()
